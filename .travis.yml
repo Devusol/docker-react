@@ -1,0 +1,21 @@
+sudo: required
+services: 
+  - docker
+
+before_install:
+  - docker build -t docker.devusol.net/docker-react -f Dockerfile.dev . 
+
+script:
+  - docker run -e CI-true docker.devusol.net/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "Docker3"
+  env: "Docker3-env"
+  bucket_name: "elasticbeanstalk-us-east-2-837029700528"
+  bucket_path: "Docker3"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: "$AWS_ACCESS_KEY"
