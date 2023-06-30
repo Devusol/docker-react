@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         Changes for Docker 3. Running with volumes on WSL Ubuntu.
+         Changes for Docker 3. Running with volumes on WSL Ubuntu and deployed with Travis CI to AWS Elastic Beanstalk.
         </p>
         <a
           className="App-link"
