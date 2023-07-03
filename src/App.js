@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         Changes for Docker 3. Running with volumes on WSL Ubuntu and deployed with Travis CI to AWS Elastic Beanstalk. EXP 80
+         Changes for Docker 3. Using PR with "feature branch"
         </p>
         <a
           className="App-link"
